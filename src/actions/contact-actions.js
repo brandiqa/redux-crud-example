@@ -1,10 +1,10 @@
-import { contacts } from '../contacts-data';
+import { client } from './';
 
 export function fetchContacts(){
   return dispatch => {
     dispatch({
       type: 'FETCH_CONTACTS',
-      payload: contacts
+      payload: client.get('/contacts')
     })
   }
 }
