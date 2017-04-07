@@ -27,3 +27,21 @@ export function saveContact(contact) {
     })
   }
 }
+
+export function fetchContact(_id) {
+  return dispatch => {
+    return dispatch({
+      type: 'FETCH_CONTACT',
+      payload: client.get(`${url}/${_id}`)
+    })
+  }
+}
+
+export function updateContact(contact) {
+  return dispatch => {
+    return dispatch({
+      type: 'UPDATE_CONTACT',
+      payload: client.put(`${url}/${contact._id}`, contact)
+    })
+  }
+}

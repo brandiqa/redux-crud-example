@@ -1,6 +1,6 @@
 const defaultState = {
   contacts: [],
-  contact: null,
+  contact: {name:{}},
   loading: false,
   error:{}
 }
@@ -45,6 +45,40 @@ export default (state=defaultState, action={}) => {
       return {
         ...state,
         errors: errors,
+        loading: false
+      }
+    }
+
+    case 'FETCH_CONTACT_PENDING': {
+      return {
+        ...state,
+        loading: true,
+        contact: {name:{}}
+      }
+    }
+
+    case 'FETCH_CONTACT_FULFILLED': {
+      return {
+        ...state,
+        contact: action.payload.data,
+        errors: {},
+        loading: false
+      }
+    }
+
+    case 'UPDATE_CONTACT_PENDING': {
+      return {
+        ...state,
+        loading: true
+      }
+    }
+
+    case 'UPDATE_CONTACT_FULFILLED': {
+      const contact = action.payload.data;
+      return {
+        ...state,
+        contacts: state.contacts.map(item => item._id === contact._id ? contact : item),
+        errors: {},
         loading: false
       }
     }
