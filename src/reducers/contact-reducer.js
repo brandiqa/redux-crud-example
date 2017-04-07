@@ -83,6 +83,25 @@ export default (state=defaultState, action={}) => {
       }
     }
 
+    case 'UPDATE_CONTACT_REJECTED': {
+      const data = action.payload.response.data;
+      const { "name.first":first, "name.last":last, phone, email } = data.errors;
+      const errors = { global: data.message, name: { first,last }, phone, email };
+      return {
+        ...state,
+        errors: errors,
+        loading: false
+      }
+    }
+
+    case 'DELETE_CONTACT_FULFILLED': {
+      const _id = action.payload.data._id;
+      return {
+        ...state,
+        contacts: state.contacts.filter(item => item._id !== _id)
+      }
+    }
+
     default:
       return state;
   }
