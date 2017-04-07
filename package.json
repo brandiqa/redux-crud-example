@@ -2,6 +2,13 @@
   "name": "react-contact-manager",
   "version": "0.1.0",
   "private": true,
+  "description": "Basic crud react app for managing contacts",
+  "author": "Michael Wanyoike",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:brandiqa/redux-crud-example.git"
+  },
   "dependencies": {
     "axios": "^0.16.0",
     "classnames": "^2.2.5",
