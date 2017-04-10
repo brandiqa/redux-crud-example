@@ -13,7 +13,7 @@ class ContactListPage extends Component {
     return (
       <div>
         <h1>List of Contacts</h1>
-        <ContactList contacts={this.props.contacts} deleteContact={this.props.deleteContact}/>
+        <ContactList contacts={this.props.contacts} loading={this.props.loading} errors={this.props.errors} deleteContact={this.props.deleteContact}/>
       </div>
     )
   }
@@ -22,7 +22,9 @@ class ContactListPage extends Component {
 // Make contacts  array available in  props
 function mapStateToProps(state) {
   return {
-      contacts : state.contactStore.contacts
+      contacts : state.contactStore.contacts,
+      loading: state.contactStore.loading,
+      errors: state.contactStore.errors
   }
 }
 
