@@ -1,5 +1,6 @@
 import React from 'react';
 import { Card, Message, Icon } from 'semantic-ui-react';
+import { Link } from 'react-router-dom';
 import ContactCard from './contact-card';
 
 export default function ContactList({contacts, loading, errors, deleteContact}){
@@ -15,11 +16,12 @@ export default function ContactList({contacts, loading, errors, deleteContact}){
     )
 
     const emptyMessage = (
-      <Message icon warning>
+      <Message icon info>
         <Icon name='warning circle' />
         <Message.Content>
            <Message.Header>No Contacts Found</Message.Header>
-           Add some new contacts to get started.
+           <p>Add some new contacts to get started.</p>
+           <Link to={'/contacts/new'} className="ui button primary">Add New Contact</Link>
        </Message.Content>
       </Message>
     )
