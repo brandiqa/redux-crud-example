@@ -3,21 +3,26 @@
   "description": "contacts api server",
   "version": "0.0.0",
   "homepage": "",
-  "main": "src/",
+  "main": "src",
   "keywords": [
     "feathers"
   ],
-  "license": "MIT",
-  "repository": {},
-  "author": {},
+  "author": {
+    "name": "Michael Wanyoike",
+    "email": "micwanyoike@gmail.com"
+  },
   "contributors": [],
   "bugs": {},
+  "directories": {
+    "lib": "src"
+  },
   "engines": {
-    "node": ">= 0.12.0"
+    "node": ">= 6.0.0",
+    "yarn": ">= 0.18.0"
   },
   "scripts": {
-    "test": "npm run jshint && npm run mocha",
-    "jshint": "jshint src/. test/. --config",
+    "test": "npm run eslint && npm run mocha",
+    "eslint": "eslint src/. test/. --config .eslintrc.json",
     "start": "nodemon src/",
     "mocha": "mocha test/ --recursive"
   },
@@ -25,24 +30,23 @@
     "body-parser": "^1.17.1",
     "compression": "^1.6.2",
     "cors": "^2.8.3",
+    "eslint": "^3.19.0",
     "feathers": "^2.1.1",
-    "feathers-authentication": "^0.7.12",
-    "feathers-configuration": "^0.3.3",
-    "feathers-errors": "^2.6.2",
-    "feathers-hooks": "^1.8.1",
-    "feathers-mongoose": "^3.6.2",
-    "feathers-rest": "^1.7.1",
-    "feathers-socketio": "^1.5.2",
-    "mongoose": "^4.9.3",
-    "mongoose-type-email": "^1.0.3",
-    "passport": "^0.3.2",
+    "feathers-configuration": "^0.4.1",
+    "feathers-errors": "^2.6.3",
+    "feathers-hooks": "^2.0.0",
+    "feathers-hooks-common": "^3.0.0",
+    "feathers-mongoose": "^5.0.3",
+    "feathers-rest": "^1.7.2",
+    "feathers-socketio": "^1.6.0",
+    "helmet": "^3.5.0",
+    "mocha": "^3.2.0",
+    "mongoose": "^4.9.5",
+    "mongoose-type-email": "^1.0.5",
+    "nodemon": "^1.11.0",
+    "request": "^2.81.0",
+    "request-promise": "^4.2.0",
     "serve-favicon": "^2.4.2",
     "winston": "^2.3.1"
-  },
-  "devDependencies": {
-    "jshint": "^2.9.4",
-    "mocha": "^3.2.0",
-    "nodemon": "^1.11.0",
-    "request": "^2.81.0"
   }
 }
