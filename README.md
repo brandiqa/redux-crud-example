@@ -18,7 +18,6 @@ cd backend
 npm install
 ```
 
-
 ## How to run
 Ensure you have mongodb installed in your system and that it is running
 
