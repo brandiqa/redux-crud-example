@@ -1,13 +1,30 @@
-# REDUX CRUD EXAMPLE
+# REDUX CRUD EXAMPLE - LEGACY VERSION
 
-This a basic crud react-redux-featherjs application for managing contacts. It currently uses MongoDB for the database and FeathersJS for the REST API server. 
+---
+
+## ATTENTION
+
+This version is still dependent on the old package dependencies for it to work well. Unfortunately, the code is no longer compatible with the latest version of Redux Form.
+
+There's now an updated version of this project: https://github.com/brandiqa/react-crud-app. The main changes introduced in the new version include:
+
+- Changing state management from Redux to [React Hooks and Context API](https://www.sitepoint.com/replace-redux-react-hooks-context-api/)
+- Replacing Redux Forms with [React Hook Forms](https://react-hook-form.com/)
+
+This version will remain accessible for those interested in learning the Redux way.
+
+---
+
+## Introduction
+
+This a basic crud react-redux-featherjs application for managing contacts. It currently uses MongoDB for the database and FeathersJS for the REST API server.
 
 https://www.sitepoint.com/crud-app-react-redux-feathersjs/
 
 ##  How to install
 
 ```bash
-git clone git@github.com:brandiqa/redux-crud-example.git
+git clone git@github.com:brandiqa/redux-crud-example.git react-contact-manager
 cd react-contact-manager
 
 # Install frontend dependencies
