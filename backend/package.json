@@ -41,7 +41,7 @@
     "feathers-socketio": "^1.6.0",
     "helmet": "^3.5.0",
     "mocha": "^3.2.0",
-    "mongoose": "^4.9.5",
+    "mongoose": "^5.7.5",
     "mongoose-type-email": "^1.0.5",
     "nodemon": "^1.11.0",
     "request": "^2.81.0",
