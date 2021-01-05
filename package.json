@@ -10,7 +10,7 @@
     "url": "git@github.com:brandiqa/redux-crud-example.git"
   },
   "dependencies": {
-    "axios": "^0.16.0",
+    "axios": "^0.21.1",
     "classnames": "^2.2.5",
     "mddir": "^1.1.0",
     "react": "^15.4.2",
